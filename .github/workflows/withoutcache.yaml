@@ -1,3 +1,5 @@
+env:
+    PULUMI_CONFIG_PASSPHRASE: ""
 name: without cache
 "on":
   push:
