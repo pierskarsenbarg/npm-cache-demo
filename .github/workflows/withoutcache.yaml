@@ -1,4 +1,4 @@
-name: main
+name: without cache
 "on":
   push:
     branches:
@@ -18,7 +18,7 @@ jobs:
       - name: Install and run Pulumi CLI
         uses: pulumi/actions@v5
         with:
-            cloud-url: local
+            cloud-url: file://~
             command: up
             upsert: true
             stack-name: withoutcache
