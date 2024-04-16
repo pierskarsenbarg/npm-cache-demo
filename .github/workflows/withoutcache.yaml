@@ -1,0 +1,25 @@
+name: main
+"on":
+  push:
+    branches:
+      - main
+jobs:
+  build_sdks:
+    name: Run Pulumi without NPM Cache
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Setup Node without cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Install and run Pulumi CLI
+        uses: pulumi/actions@v5
+        with:
+            cloud-url: local
+            command: up
+            upsert: true
+            stack-name: withoutcache
+      
