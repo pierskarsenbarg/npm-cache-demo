@@ -5,7 +5,7 @@
         "@types/node": "^20"
     },
     "dependencies": {
-        "@pulumi/aws": "^6.35.0",
+        "@pulumi/aws": "^6.36.0",
         "@pulumi/kubernetes": "^4.11.0",
         "@pulumi/pulumi": "^3.116.0",
         "@pulumi/random": "^4.16.1",
